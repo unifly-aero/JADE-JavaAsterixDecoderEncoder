@@ -14,10 +14,10 @@ import java.util.Hashtable;
 import java.util.Map;
 
 /**
- * Represents a reserved Asterix field with defaulot behaviour:
+ * Represents a reserved Asterix field with default behaviour:
  * - interprets the first octet as the length of the item
  * - skips the item
- * For custom implementations, you need to derive from this class ad oerride the decode method
+ * For custom implementations, you need to derive from this class and override the decode method
  */
 public class ReservedAsterixField extends AsterixItem implements Decodable, Encodable {
     private final Map<String, String> values;
