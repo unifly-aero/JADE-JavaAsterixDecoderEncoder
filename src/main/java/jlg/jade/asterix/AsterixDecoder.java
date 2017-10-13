@@ -101,6 +101,8 @@ public class AsterixDecoder {
             int dataBlockSize = Byte.toUnsignedInt(
                     input[inputIndex + 1]) * 256 + Byte.toUnsignedInt(input[inputIndex + 2]);
 
+            if (dataBlockSize == 0) break;
+            
             Boolean shouldDecodeCategory = allowedCategories.get(dataBlockCategory);
             if (shouldDecodeCategory != null && shouldDecodeCategory) {
 
